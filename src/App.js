@@ -54,6 +54,8 @@ function App() {
 
       {/* Dark mode , light Mode */}
       {/* <ViewMode /> */}
+
+      <h6>Divy Gandhi</h6>
     </>
   );
 }
