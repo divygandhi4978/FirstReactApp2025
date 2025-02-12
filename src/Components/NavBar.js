@@ -38,58 +38,20 @@ export default function NavBar(props) {
                   {props.about}
                 </a>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href=" /"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul className="dropdown-menu">
-                  <li onClick={clrPage}>
-                    <a className="dropdown-item" href=" /">
-                      ReloadPage
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href=" /">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href=" /">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
+             
+              <li className="nav-item">
+                <div className="form-check form-switch">
+                  <input className="form-check-input" type="checkbox" onClick={props.toggle} role="switch" id="flexSwitchCheckDefault" />
+                  <label className="form-check-label mx-3 w-10" htmlFor="flexSwitchCheckDefault">{props.mode === 'dark' ? "Light" : "Dark"}</label>
+                </div>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
 
-              <div className="form-check form-switch">
-          <input className="form-check-input" type="checkbox" onClick={props.toggle} role="switch" id="flexSwitchCheckDefault" />
-          <label className="form-check-label mx-3 w-10" htmlFor="flexSwitchCheckDefault">{props.mode === 'dark' ? "Light" : "Dark"}</label>
-        </div>
-            </form>
+
           </div>
         </div>
 
-        
+
       </nav>
     </div>
   );
